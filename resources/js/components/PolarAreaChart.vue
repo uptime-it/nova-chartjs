@@ -1,5 +1,5 @@
 <template>
-  <loading-card :loading="loading" class="min-h-40">
+  <loading-card :loading="loading" class="min-h-40 px-6 py-4">
     <div class="h-6 mb-4 flex items-center px-6">
       <h4 class="mr-3 leading-tight text-sm font-bold">{{ checkTitle }}</h4>
       <div class="flex relative ml-auto flex-shrink-0">
