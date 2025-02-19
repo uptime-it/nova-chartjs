@@ -14,7 +14,7 @@
         </default-button>
       </div>
     </div>
-    <line-chart v-if="!loading" :chart-data="datacollection" :options="options"></line-chart>
+    <line-chart v-if="!loading" :chart-data="datacollection" :options="options" :height="height"></line-chart>
   </loading-card>
 </template>
 
@@ -33,6 +33,7 @@
       this.card.options = this.card.options != undefined ? this.card.options : false;
       return {
         datacollection: {},
+        height: this.card.chartHeight || null,
         options: {},
         loading: false,
         buttonRefresh: (this.card.options != undefined) ? this.card.options.btnRefresh : false,
