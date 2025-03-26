@@ -21,8 +21,8 @@
         </default-button>
         <select-control
           size="xxs"
-          @change="handleFilterChanged"
-          :selected="advanceFilterSelected"
+          @selected="handleFilterChanged"
+          :v-model="advanceFilterSelected"
           v-show="showAdvanceFilter"
         >
           <option v-for="filter in advanceFilter" v-bind:value="filter.value" :key="filter.key">
@@ -129,7 +129,6 @@ export default {
       window.location.reload();
     },
     handleFilterChanged(value) {
-      this.advanceFilterSelected = value;
       this.fillData();
     },
     fillData() {
